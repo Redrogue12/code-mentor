@@ -4,7 +4,7 @@ function calculateFactorial() {
   let acum = number;
   while (counter > 1) {
     counter--;
-    acum *= number;
+    acum *= counter;
   }
   const result = document.getElementById('factorialResult');
   result.innerHTML = "Result is: " + number + "! = " + acum;
