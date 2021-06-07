@@ -15,11 +15,57 @@
     <title>Document</title>
   </head>
   <body>
-    <p>Enter a number, get a factorial</p>
-    <label for="number">Number:</label>
-    <input id="number" type="number" />
-    <button class="btn btn-success" onclick="calculateFactorial()">
-      Enter
-    </button>
+    <div class="container mt-4">
+      <h5>Exercise 1</h5>
+      <p>
+        Write a program and ask the user to enter a number. Compute the
+        factorial of the number and print it on the console. For example, if the
+        user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and
+        display it as 5! = 120
+      </p>
+      <label for="number">Number:</label>
+      <input id="number" type="number" />
+      <button class="btn btn-success" onclick="calculateFactorial()">
+        Enter
+      </button>
+      <div id="factorialResult"></div>
+
+      <hr />
+
+      <h5>Exercise 2</h5>
+      <p>
+        Write a program to count how many numbers between 1 and 100 are
+        divisible by 3 with no remainder. Display the count on the console.
+      </p>
+      <button class="btn btn-success" onclick="getDivisibleByThree()">
+        Get
+      </button>
+
+      <hr />
+
+      <h5>Dates</h5>
+
+      <ul>
+        <li>How can we get the current date/time?</li>
+        <ul>
+          <li>We can get the current date with: new Date()</li>
+        </ul>
+        <li>How can we get the current year?</li>
+        <ul>
+          <li>We can get the current year with: new Date().getFullYear()</li>
+        </ul>
+      </ul>
+
+      <hr />
+
+      <h5>Exercise 3</h5>
+      <p>
+        Create a function that accepts a string and returns `true` if the string
+        is a valid number, or `false` if it is not.
+      </p>
+      <label for="exercise3">Number:</label>
+      <input id="exercise3" type="text" />
+      <button class="btn btn-success" onclick="isNumber()">Enter</button>
+    </div>
   </body>
 </html>
