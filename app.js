@@ -20,16 +20,19 @@ function getDivisibleByThree() {
   console.log(counter)
 }
 
+const numbers = [1,2,3,4,5,6,7,8,9,0];
+
+const checkIsNumber = num => numbers.indexOf(parseInt(num));
+
 function isNumber() {
-  const text = document.getElementById('exercise3');
-  const splitText = text.value.split('')
-  for (let i = 0; i < splitText.length; i++) {
-    const current = splitText[i];
-    if (!Number(current)) {
-      console.log('false');
-      return false
-    }
+  const text = document.getElementById('exercise3').value;
+  const splitText = text.split('');
+  const checkDecimals = text.split('.');
+
+  if (checkDecimals.length > 2) return false;
+
+  for (const current of splitText) {
+    if (current !== "." && checkIsNumber(current) === -1) return false;
   }
-  console.log('true')
-  return true
+  return true;
 }
