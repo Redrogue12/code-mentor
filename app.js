@@ -1,3 +1,6 @@
+// =================================================================
+// Exercise 1
+
 function calculateFactorial() {
   let number = parseInt(document.getElementById('number').value);
   let counter = number;
@@ -10,6 +13,9 @@ function calculateFactorial() {
   result.innerHTML = "Result is: " + number + "! = " + acum;
 }
 
+// =================================================================
+// Exercise 2
+
 function getDivisibleByThree() {
   let number = 1;
   let counter = 0;
@@ -19,6 +25,9 @@ function getDivisibleByThree() {
   }
   console.log(counter)
 }
+
+// =================================================================
+// Exercise 3
 
 const numbers = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
@@ -42,4 +51,13 @@ function isNumber() {
   }
   console.log(true);
   return true;
+}
+
+// =================================================================
+// Exercise 4
+
+const accounts = [[1, 2, 3], [3, 2, 1]];
+
+getWealthiest = (accounts) => {
+  
 }
