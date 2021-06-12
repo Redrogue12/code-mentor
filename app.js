@@ -64,8 +64,10 @@ function isNumber() {
 // =================================================================
 // Exercise 4
 
-const accounts = [[1, 2, 3], [3, 2, 1]];
+const accounts = [[2,8,7],[7,1,3],[1,9,5]];
 
 getWealthiest = (accounts) => {
-  
+  return Math.max(...accounts.map(acc => acc.reduce((acum, value) => acum + value)))
 }
+
+console.log('wealthiest', getWealthiest(accounts))
