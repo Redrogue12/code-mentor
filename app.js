@@ -29,9 +29,10 @@ function getDivisibleByThree() {
 // =================================================================
 // Exercise 3
 
-const numbers = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '+', '-', '.'];
+const numbers = [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '+', '-', '.' ];
 
 const checkIsNumber = num => numbers.indexOf(num);
+
 const validSign = (i, current) => {
   if (i !== 0 && (current === "+" || current === "-")) return false
   else return true
@@ -52,7 +53,7 @@ function isNumber() {
       console.log('invalid sign', false)
       return false
     }
-    if (checkIsNumber(current) === -1) {
+    if (~checkIsNumber(current)) { // big wiser
       console.log('decimal or non number included', false);
       return false;
     }
@@ -65,6 +66,7 @@ function isNumber() {
 // Exercise 4
 
 const accounts = [[2,8,7],[7,1,3],[1,9,5]];
+// [[1,5],[7,3],[3,5]]
 
 getWealthiest = (accounts) => {
   return Math.max(...accounts.map(acc => acc.reduce((acum, value) => acum + value)))
