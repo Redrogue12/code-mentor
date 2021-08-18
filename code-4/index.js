@@ -3,18 +3,7 @@
 
 // O(A*B) Time
 // O(N)   Space
-// const getArrayIntersection = (nums1, nums2) => {
-//   const intersections = [];
-//   for (let i = 0; i < nums1.length; i++) {
-//     const num1 = nums1[i];
-//     for (let j = 0; j < nums2.length; j++) {
-//       const num2 = nums2[j];
-//       if (!intersections.includes(num1) && num1 === num2) intersections.push(num1);
-//     }
-//   }
-//   return intersections;
-// }
-
+// HASH MAP*
 const getArrayIntersection = (nums1, nums2) => {
   const intersections = new Set();
   for (let i = 0; i < nums1.length; i++) {
@@ -24,7 +13,6 @@ const getArrayIntersection = (nums1, nums2) => {
       if (num1 === num2) intersections.add(num1);
     }
   }
-
   return intersections;
 }
 
@@ -32,17 +20,7 @@ const getArrayIntersection = (nums1, nums2) => {
 // nums2 = [2,2];
 const nums1 = [4,9,5];
 const nums2 = [9,4,9,8,4];
-// console.log('getArrayIntersection:', getArrayIntersection(nums1, nums2))
-
-// Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string.
-// You must solve the problem without using any built-in library for handling large integers (such as BigInteger). You must also not convert the inputs to integers directly.
-
-// https://baffinlee.com/leetcode-javascript/problem/add-strings.html
-// https://shareablecode.com/snippets/add-strings-javascript-solution-uzS4-zP5u
-
-// const sumStringNums = (num1, num2) => {
-
-// }
+console.log('getArrayIntersection:', getArrayIntersection(nums1, nums2))
 
 // Is Anagram
 // Create a function that takes in two strings and returns `true` if one string is an anagram of another string and otherwise returns `false`.
@@ -73,14 +51,12 @@ const isAnagram = (str1, str2) => {
 let strA = "anagram";
 let strB = "nagaram";
 
-// console.log('isAnagram:', isAnagram(strA, strB))
+console.log('isAnagram:', isAnagram(strA, strB))
 
-
-function minimumWaitingTime(queries) {
+const minimumWaitingTime = (queries) => {
 	const length = queries.length;
 	if (length === 1) return 0;
 	queries = queries.sort((a, b) => a - b);
-  console.log('queries:', queries)
 	let total = 0;
 	for (let i = 0; i < length; i++) {
 		const num = queries[i];
@@ -90,4 +66,14 @@ function minimumWaitingTime(queries) {
   return total;
 }
 const queries = [17, 4, 3];
-	console.log('minimumWaitingTime:', minimumWaitingTime(queries))
+console.log('minimumWaitingTime:', minimumWaitingTime(queries))
+
+// Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string.
+// You must solve the problem without using any built-in library for handling large integers (such as BigInteger). You must also not convert the inputs to integers directly.
+
+// https://baffinlee.com/leetcode-javascript/problem/add-strings.html
+// https://shareablecode.com/snippets/add-strings-javascript-solution-uzS4-zP5u
+
+// const sumStringNums = (num1, num2) => {
+
+// }
